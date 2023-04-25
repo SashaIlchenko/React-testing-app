@@ -1,13 +1,14 @@
 import { Outlet } from "react-router-dom";
 import { Suspense } from "react";
-import { Container, Main, Header, Link } from "./Layout.styled"
+import { Container, Main, Header, Link, SpinnerWrapper } from "./Layout.styled"
+import BounceLoader from "react-spinners/BounceLoader";
 const Layout = () => {
     return (
         <Container><Header><nav><Link to='/'>Home</Link >
             <Link to='/tweets'>Tweets</Link >
         </nav></Header>
             <Main>
-                <Suspense fallback={<div>Loading page...</div>}>
+                <Suspense fallback={<SpinnerWrapper><BounceLoader color='#766A92' /></SpinnerWrapper>}>
                     <Outlet /> </Suspense>
             </Main></Container>
     )

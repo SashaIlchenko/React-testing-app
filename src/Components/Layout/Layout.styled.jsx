@@ -21,9 +21,10 @@ export const Main = styled.main`
 margin-left: auto;
 margin-right: auto;`
 export const Link = styled(NavLink)`
-padding: 8px 16px;
+padding: 14px 16px;
   font-weight: 600;
   font-size: 18px;
+      margin-right: 20px;
   text-transform: uppercase;
   text-align: center;
   border-radius:10px;
@@ -35,3 +36,8 @@ padding: 8px 16px;
    &.active {
     background-color: #5CD3A8;
   }`
+
+export const SpinnerWrapper = styled.div`
+display: flex;
+justify-content: center;`
+

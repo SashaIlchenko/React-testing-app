@@ -51,7 +51,6 @@ export const UserItem = ({ user }) => {
         }
         return NumberArr.toSpliced(1, 0, ',');
     }
-
     return (<Item>
         <Wrapper>
             <img src={logo} alt="logo" />

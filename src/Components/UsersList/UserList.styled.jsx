@@ -16,3 +16,12 @@ background-color: #EBD8FF;
 border-radius: 10.31px;
 
 `
+export const AllBtn = styled.button`
+position:absolute;
+top: 74px;
+left: 600px;
+width: 196px;
+color: #373737;
+background-color: #EBD8FF;
+border-radius: 10.31px;
+// margin-left:auto; `
