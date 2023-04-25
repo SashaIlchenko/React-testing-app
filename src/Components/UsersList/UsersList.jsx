@@ -1,7 +1,11 @@
-
 import { useEffect, useState } from "react";
 import { getUsers } from "../../API";
 import { UserItem } from '../UserItem/UserItem'
+import {
+    TweetsList,
+    LoadBtn
+} from "./UserList.styled";
+
 export const UserList = () => {
     const [users, setUsers] = useState([]);
     const [page, setPage] = useState(1);
@@ -24,16 +28,16 @@ export const UserList = () => {
         setPage(per => per + 1);
     }
     return (
-        <div>
+        <>
             {
-                <ul>
+                <TweetsList >
                     {users.map(user => (
                         <UserItem key={user.id} user={user} />
                     ))}
-                </ul>
+                </TweetsList >
             }
-            <button type='button' onClick={handleBtnClick}>Load more</button>
-        </div>
+            <LoadBtn type='button' onClick={handleBtnClick}>Load more</LoadBtn>
+        </>
     );
 };
 
