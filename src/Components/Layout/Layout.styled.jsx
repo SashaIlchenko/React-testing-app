@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
 
 export const Container = styled.div`
- max-width:1200px;
+ max-width:1300px;
   margin: 0 auto;
   padding: 0 16px;`
 
@@ -17,7 +17,9 @@ export const Header = styled.header`
   > nav {
     display: flex;
   }`
-
+export const Main = styled.main`
+margin-left: auto;
+margin-right: auto;`
 export const Link = styled(NavLink)`
 padding: 8px 16px;
   font-weight: 600;

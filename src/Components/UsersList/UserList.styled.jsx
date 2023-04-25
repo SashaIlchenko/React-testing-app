@@ -8,6 +8,7 @@ gap: 48px;`
 
 export const LoadBtn = styled.button`
 width: 196px;
+margin-top: 50px;
 margin-left: auto;
 margin-right: auto;
 color: #373737;
