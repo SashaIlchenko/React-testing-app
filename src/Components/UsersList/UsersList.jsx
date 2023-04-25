@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { getUsers } from "../../API";
 import { UserItem } from '../UserItem/UserItem';
 import { getAllUsers } from "../../API";
-// import { Filter } from "../Dropdown/Dropdown";
+
 import {
     TweetsList,
     LoadBtn,
     AllBtn
 } from "./UserList.styled";
 import { toast, Toaster } from "react-hot-toast";
-import BounceLoader from "react-spinners/BounceLoader";
+
 
 export const UserList = () => {
     const [users, setUsers] = useState([]);
@@ -38,11 +38,12 @@ export const UserList = () => {
             try {
                 const data = await getAllUsers();
                 setUsers([...data]);
-                setIsloading(true);
+                setIsloading(false);
+
             } catch (error) {
                 console.log(error);
-
             }
+
         }
         getDataAllUsers()
     }
@@ -53,7 +54,6 @@ export const UserList = () => {
         <>
             <AllBtn type='button' onClick={handleAllClick}>Show All</AllBtn>
             <Toaster />
-            {!isLoading && <BounceLoader color='#766A92' />}
             {<TweetsList >
                 {users.map(user => (
                     <UserItem key={user.id} user={user} />
