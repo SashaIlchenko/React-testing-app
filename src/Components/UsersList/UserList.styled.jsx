@@ -14,14 +14,15 @@ margin-right: auto;
 color: #373737;
 background-color: #EBD8FF;
 border-radius: 10.31px;
-
 `
 export const AllBtn = styled.button`
 position:absolute;
 top: 74px;
-left: 600px;
+left: 124px;
 width: 196px;
 color: #373737;
 background-color: #EBD8FF;
 border-radius: 10.31px;
-// margin-left:auto; `
+ &:hover {
+background-color: #5CD3A8;
+}`
